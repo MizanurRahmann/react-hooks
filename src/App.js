@@ -8,6 +8,8 @@ import HookCounterFour from './Components/HookCounterFour';
 import UseEffectOne from './Components/UseEffectOne';
 import HookMouse from './Components/HookMouse';
 import MouseContainer from './Components/MouseContainer';
+import IntervalClassCounter from './Components/IntervalClassCounter';
+import IntervalHookCuounter from './Components/IntervalHookCuounter';
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
       {/* <HookCounterFour /> */}
       {/* <UseEffectOne /> */}
       {/* <HookMouse /> */}
-      <MouseContainer />
+      {/* <MouseContainer /> */}
+      <IntervalClassCounter />
+      <IntervalHookCuounter />
     </div>
   );
 }
