@@ -11,6 +11,10 @@ import MouseContainer from './Components/MouseContainer';
 import IntervalClassCounter from './Components/IntervalClassCounter';
 import IntervalHookCuounter from './Components/IntervalHookCuounter';
 import DataFetching from './Components/DataFetching';
+import UserComponetC from './Components/UserComponentC';
+
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
 
 function App() {
   return (
@@ -20,12 +24,18 @@ function App() {
       {/* <HookCounterTwo /> */}
       {/* <HookCounterThree /> */}
       {/* <HookCounterFour /> */}
+      
       {/* <UseEffectOne /> */}
       {/* <HookMouse /> */}
       {/* <MouseContainer /> */}
       {/* <IntervalClassCounter />
       <IntervalHookCuounter /> */}
-      <DataFetching />
+      {/* <DataFetching /> */}
+      <UserContext.Provider value={"Azox"}>
+        <ChannelContext.Provider value={"New-World"}>
+          <UserComponetC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
