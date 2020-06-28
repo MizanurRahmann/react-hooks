@@ -18,6 +18,7 @@ import CounterThree from './Components/CounterThree';
 import ComponentA from './Components/ComponentA';
 import ComponentB from './Components/ComponentB';
 import ComponentC from './Components/ComponentC';
+import DataFetchingOne from './Components/DataFetchingOne';
 
 
 export const UserContext = React.createContext();
@@ -25,27 +26,27 @@ export const ChannelContext = React.createContext();
 
 export const CountContext = React.createContext();
 
-const initialState = 0;
-const reducer = (state, action) => {
-    switch(action){
-        case 'Increament':
-            return state + 1;
-        case 'Decreament':
-            return state - 1;
-        case 'Reset':
-            return initialState;
-        default:
-            return state;
-    }
-}
+// const initialState = 0;
+// const reducer = (state, action) => {
+//     switch(action){
+//         case 'Increament':
+//             return state + 1;
+//         case 'Decreament':
+//             return state - 1;
+//         case 'Reset':
+//             return initialState;
+//         default:
+//             return state;
+//     }
+// }
 
 
 function App() {
-  const [count, dispatch] = useReducer(reducer, initialState);
+  // const [count, dispatch] = useReducer(reducer, initialState);
   
 
   return (
-    <CountContext.Provider value={{countState: count, countDispatch: dispatch}}>
+    // <CountContext.Provider value={{countState: count, countDispatch: dispatch}}>
       <div className="App">
         <br /><br />
         {/* <HookCounter /> */}
@@ -69,12 +70,14 @@ function App() {
         {/* <CounterTwo /> */}
         {/* <CounterThree /> */}
       
-          Count - {count}
-          <ComponentA /> <br />
-          <ComponentB /> <br />
-          <ComponentC /> <br />
+        {/* Count - {count}
+        <ComponentA /> <br />
+        <ComponentB /> <br />
+        <ComponentC /> <br /> */}
+
+        <DataFetchingOne />
         </div>  
-    </CountContext.Provider>
+    // </CountContext.Provider>
   );
 }
 
