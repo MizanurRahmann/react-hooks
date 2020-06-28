@@ -20,6 +20,7 @@ import ComponentB from './Components/ComponentB';
 import ComponentC from './Components/ComponentC';
 import DataFetchingOne from './Components/DataFetchingOne';
 import DataFetchingTwo from './Components/DataFetchingTwo';
+import ParentComponent from './Components/useCallback/ParentComponent';
 
 
 export const UserContext = React.createContext();
@@ -77,7 +78,9 @@ function App() {
         <ComponentC /> <br /> */}
 
         {/* <DataFetchingOne /> */}
-        <DataFetchingTwo />
+        {/* <DataFetchingTwo /> */}
+
+        <ParentComponent />
         </div>  
     // </CountContext.Provider>
   );
