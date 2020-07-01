@@ -27,7 +27,9 @@ import ClassTimer from './Components/useRef/ClassTimer';
 import HookTimer from './Components/useRef/HookTimer';
 import DocTitleOne from './Components/CustomHooks/DocTitleOne';
 import DocTitleTwo from './Components/CustomHooks/DocTitleTwo';
-
+import CounterOnec from './Components/CustomHooks/CounterOnec';
+import CounterTwoc from './Components/CustomHooks/CounterTwoc';
+import UserForm from './Components/CustomHooks/UserForm';
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -91,10 +93,14 @@ function App() {
         {/* <Counter /> */}
 
         {/* <FocusInput /> */}
+        
         {/* <ClassTimer />
         <HookTimer /> */}
-        <DocTitleOne />
-        <DocTitleTwo />
+        {/* <DocTitleOne />
+        <DocTitleTwo /> */}
+        {/* <CounterOnec />
+        <CounterTwoc /> */}
+        <UserForm />
         </div>  
     // </CountContext.Provider>
   );
