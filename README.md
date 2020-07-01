@@ -24,14 +24,14 @@ Ex: State of a component.
 The Effect Hook let you perform **side effect** in **functional components**.\
 It is a close replacement for **componentDidMount, componentDidUpdate**  and **componentWillUnmount**
 
-## 3. useContext:
+## 3. useContext Hook:
 **Context :** Context provides a way to pass data through the component tree without having to pass props down manually at every level. To create a context you have to use "React.createContext()"
 
 Accepts a context object and returns the current context value for that context. The current context value is determined by the value prop of the nearest <MyContext.Provider> above the calling component in the tree.
 
 When the nearest <MyContext.Provider> above the component updates, this Hook will trigger a rerender with the latest context value passed to that MyContext provider. Even if an ancestor uses React.memo or shouldComponentUpdate, a rerender will still happen starting at the component itself using useContext.
 
-## 4. useReducer:
+## 4. useReducer Hook:
 An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method.\
 **useReducer is related to reducers.**
 | reducer in JavaScript | useReducer in React|
@@ -57,7 +57,7 @@ It is useful when passing callbacks to optimized child components that rely on r
 >But using useCallback is not optilamal always.
 To see more [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback).
 
-## 7. useMemo:
+## 7. useMemo Hook:
 useMemo passes a “create” function and an array of dependencies and only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.
 
 ## 8.Difference between useCallback and useMemo:
