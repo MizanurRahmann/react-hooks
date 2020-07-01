@@ -31,8 +31,16 @@ Accepts a context object and returns the current context value for that context.
 
 When the nearest <MyContext.Provider> above the component updates, this Hook will trigger a rerender with the latest context value passed to that MyContext provider. Even if an ancestor uses React.memo or shouldComponentUpdate, a rerender will still happen starting at the component itself using useContext.
 
+## 4. useReducer:
+An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method.\
+**useReducer is related to reducers.**
+| reducer in JavaScript | useReducer in React|
+|---------|-----------|
+| array.**reduce**(**reducer**, initialValue) | **useReducer**(**reducer**, initialState)|
+|singleValue = reducer(accumulator, itemValue) | newState = reducer(currentState, action)|
+|**reduce** method returns a single value| **useReducer** returns a pair of values. [newState, dispath]|
 
-## 4. useReducer vs useState:
+## 5. useReducer vs useState:
 | Scenario | useState | useReducer |
 |---------|-------------|-----------|
 | Type of state | Number, String, Boolean | Object or Array |
@@ -41,7 +49,7 @@ When the nearest <MyContext.Provider> above the component updates, this Hook wil
 | Business logic | No business logic | Complex business logic |
 | Local vs Global | Local | Global |
 
-## 5. useCallback Hook
+## 6. useCallback Hook
 **what?**\
 useCallback is a hook that will return a memorized version of the callback function that only changes if one of the dependencies has changed.\
 **Why?**\
@@ -49,9 +57,13 @@ It is useful when passing callbacks to optimized child components that rely on r
 >But using useCallback is not optilamal always.
 To see more [When to useMemo and useCallback](https://kentcdodds.com/blog/usememo-and-usecallback).
 
-## 6. useMemo:
+## 7. useMemo:
 useMemo passes a “create” function and an array of dependencies and only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.
 
-## 7.Difference between useCallback and useMemo:
+## 8.Difference between useCallback and useMemo:
 useCallback caches the provided function instance itself, where useMemo invokes the provided function and caches its result.\
 So, if you need to cache a function use useCallback and if you want to cache the result of a invoked function then use useMemo.
+
+## 9. Custom Hooks
+A custom Hook is basically a JavaScript function whose name starts with "use". A custom Hook can call other Hooks if required.
+**why? :** Share logic - Alternative to HOCs and Render Props.
